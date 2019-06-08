@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto;
+
+service SpiderService{
+
+    rpc GetXiaohua(Req) returns (Res){};
+
+}
+
+
+message Req{
+ string start=1;
+ string end=2;
+}
+
+message Res{
+ string message=1;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+service HelloService{
+
+    rpc CreateUser(ReqUser) returns (ResUser){};
+    rpc Login(ReqUser) returns (ResUser){};
+}
+
+
+message ReqUser{
+ string Username=1;
+ string Pwd=2;
+}
+
+message ResUser{
+ string Username=1;
+}
+
